@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+     content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+       
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+     crossorigin="anonymous">
+      <!-- Option 1: Include in HTML -->
+      <link rel="stylesheet"
+       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <style>
+
+        /* Ensure images take full width of the container */
+.instagram-card img {
+    width: 100%;
+    display: block;
+}
+
+/* Overlay Styling */
+.instagram-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease; /* Smooth fade effect */
+    text-align: center;
+}
+
+/* Instagram Icon Styling */
+.instagram-icon {
+    font-size: 2rem; /* Adjust size as needed */
+    margin-bottom: 10px;
+}
+
+/* Hover Effect: Show the Overlay */
+.instagram-card:hover .instagram-overlay {
+    opacity: 1;
+}
+
+/* Remove underline from links */
+.text-decoration-none {
+    text-decoration: none;
+}
+
+        </style>
+
+
+
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-warning navbar-light">
+
+      <div class="container">
+
+       <a href=""class="navbar-brand">Natural farming</a>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+data-bs-target="#navmenu">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+    
+<div class="collapse navbar-collapse" id="navmenu"><!--navbar-->
+    
+  <ul class="navbar-nav ms-auto">
+
+    <li class="nav-item">
+     <a href="#Home" class="nav-link">Home</a>
+    </li>
+
+  <li class="nav-item">
+    <a href="#Shop Product" class="nav-link">Shop Product</a>
+  </li>
+
+   <li class="nav-item">
+     <a href="#FAQ" class="nav-link">FAQ</a>
+    </li>
+
+<li class="nav-item">
+   <a href="#About Us" class="nav-link">About Us</a>
+ </li>
+
+<li class="nav-item">
+  <a href="#Contact" class="nav-link">Contact</a>
+</li>
+
+  <li class="nav-item me-3"><a class="bi bi-person-fill nav-link fw-bold .def" data-bs-toggle="modal" data-bs-target="#Reg" >Register</a></li>
+
+
+  <li class="nav-item me-3 "><a class="bi bi bi-person-fill nav-link fw-bold .def" data-bs-toggle="modal" data-bs-target="#Login">Login</a></li>
+
+
+</ul>
+</div><!--main-->
+    </div>
+</nav>
+
+<!--Show case-->
+<section class="bg-white text-light p-5 text-center text-sm-start">
+    <div class="container">
+        <div class="row">
+            <div>
+                <h1 class="text-dark"> SHARADHA <span class="text-warning"> FARMS</span></h1>
+                <P class="lead text-dark my-4">
+                   <strong><b> Conventional farming relies on the use of synthetic pesticides, which are chemical substances specifically designed to kill or control pests that can damage crops. These pesticides are typically derived from artificial compounds and can have negative impacts on the environment, including soil degradation, water pollution, and harm to beneficial insects and wildlife.</b></strong>
+                </P>
+              </div>
+            <div>
+            <img class=" img-responsive" src="images/g.webp" alt="" width="100%" height="auto" >
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="Reg"><!--model-->
+
+      <div class="modal-dialog "><!--model-dialog-->
+  
+          <div class="modal-content"><!--modal-content-->
+  
+  
+              <div class="modal-header "><!--model-header-->
+     
+                 <h3 class="bi bi-person-fill ms-3 head" style="color: blue;">Register</h3>
+                 <button class="btn btn-close btn btn-danger" data-bs-dismiss="modal"></button>
+              </div><!--model-header-->
+  
+                 <div class="modal-body"><!--modal-body-->
+  
+                  <form action="">
+  
+                  <div><label class="form-label" style="color:black";>Name</label><span class="req">*</span></div>
+                  <div><input type="text" id="name"name="name" placeholder="Full Name" class="form-control"></div>
+                  <div class="mt-2 form-label" ><label style="color:black";>Email</label><span class="req">*</span></div>
+                  <div><input type="email" placeholder="example@gmail.com"id="email" name="email" class="form-control"></div>
+  
+                  
+                  <div class="mt-2 form-label" ><label  style="color:black">Password</label><span class="req">*</span></div>
+                  <div><input type="password" placeholder="Enter your password"id="pword" name="pword" class="form-control"></div>
+  
+                  <div class="modal-footer text-start mt-3">
+                      <button type="submit" class="btn btn-success">Register</button>
+                      <button type="reset" class="btn btn-danger">Reset</button>
+                  </div>
+              </form>
+                 </div><!--modal-body-->
+  
+          </div><!--modal-content-->
+  
+      </div><!--model-dialog-->
+  
+  </div><!--model Register-->  
+
+
+  <div class="modal" id="Login"><!--modal-->
+    <div class="modal-dialog"><!--modal-dialog-->
+        <div class="modal-content"><!--modal-content-->
+
+            <div class="modal-header"><!--modal-header-->
+                <h3 class="bi bi bi-person-fill head" style="color: blue;">Login</h3>
+                <button class="btn btn-close btn btn-danger" data-bs-dismiss="modal"></button>
+
+            </div><!--modal-header-->
+
+            <div class="modal-body"><!--modal-body-->
+
+
+               <form>
+                <div><label class="form-label" style="color: black;">Email Address</label></div>
+                <div><input type="email" id="email" name="email" class="form-control" placeholder="example@gmail.com"></div>
+
+                <div class="mt-2"><label class="form-label" style="color: black;">Password</label></div>
+                <div><input type="password" id="pword"class="form-control" placeholder="Enter your password
+                    "></div>
+
+                <div class="mt-3 modal-footer">
+                    <button type="submit" class="btn btn-success" >Login</button>
+                    <button class="btn btn-danger" data-bs-dismiss="modal" >Cancel</button>
+                </div>
+
+               </form>
+
+
+            </div><!--modal-body-->
+
+        </div><!--modal-content-->
+
+    </div><!--modal-dialog-->
+</div><!--modal-->
+
+<!--sequence images-->
+
+
+    <section class="p-2 bg-white" id="Shop Product">
+        <div class="container">
+            <h2 class="text-center text-dark mb-4">All Products</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                  <img src="images/a.webp" alt="Desi Cow Ghee" style="width:100%">
+                  <p class=" text-center text-dark mt-4"><strong> Desi Cow Ghee </strong></p>
+                  <p class=" text-center text-dark mt-1"> From Rs. 800.00</p>
+                  
+                </div>
+                <div class="col-md-4">
+                  <img src="images/b.webp" alt="Natural Thermaric" style="width:100%">
+                  <p class=" text-center text-dark mt-4"><strong> Natural Thermaric </strong></p>
+                  <p class=" text-center text-dark mt-1"> From Rs. 470.00</p>
+                </div>
+                <div class="col-md-4">
+                  <img src="images/c.webp" alt="Bee Pollen" style="width:100%">
+                  <p class=" text-center text-dark mt-4"><strong> Bee Pollen </strong></p>
+                  <p class=" text-center text-dark mt-1"> From Rs. 600.00</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="images/d.webp" alt="Millets" style="width:100%">
+                    <p class=" text-center text-dark mt-4"><strong> Millets </strong></p>
+                    <p class=" text-center text-dark mt-1"> From Rs. 970.00</p>
+                  </div>
+                  <div class="col-md-4">
+                    <img src="images/e.webp" alt="Natural Honey" style="width:100%">
+                    <p class=" text-center text-dark mt-4"><strong> Natural Honey </strong></p>
+                    <p class=" text-center text-dark mt-1"> From Rs. 950.00</p>
+
+                  </div>
+                  <div class="col-md-4">
+                    <img src="images/f.webp" alt="Natural Red Chilli Powder" style="width:100%">
+                    <p class=" text-center text-dark mt-4"><strong> Natural Red Chilli Powder </strong></p>
+                    <p class=" text-center text-dark mt-1"> From Rs. 390.00</p>
+                  </div>
+              </div>
+        </div>
+    </section>
+
+    <!--Cards-->
+
+<section class="p-5">
+<div class="container">
+    <div class="row text-center">
+        <div class="col-md">
+            <div class="card bg-secondary text-white">
+                <div class="card-body text-center">
+                    <div class="h1">
+                        <li class="bi-"></li>
+                    </div>
+                    <h3 class="card-title">Farm-to-Table Freshness</h3>
+                    <p class="card-text">Enjoy the vibrant flavors and superior quality of food that has been carefully harvested and brought straight to your doorstep.</p>
+                </div>
+            </div>
+        </div>
+    <div class="col-md">
+        <div class="card bg-light text-dark">
+            <div class="card-body text-center">
+                <div class="h1">
+                    <li class="bi-"></li>
+                </div>
+                <h3 class="card-title">Pure and Clean Ingredients</h3>
+                <p class="card-text">Enjoy the peace of mind that comes from consuming food free from harmful chemicals, pesticides, and artificial additives.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md">
+        <div class="card bg-secondary text-white">
+            <div class="card-body text-center">
+                <div class="h1">
+                    <li class="bi-"></li>
+                </div>
+                <h3 class="card-title">Nutritional Excellence</h3>
+                <p class="card-text">Our Products are packed with essential nutrients, vitamins, and minerals, providing customers with optimal nutrition.</p>
+</div>
+        </div>
+    </div>
+    </div>
+</div>
+</section>
+<!--faq-->
+<section class="p-5 bg-white"  id="FAQ">
+    <div class="container">
+        <h2 class="text-center text-dark  mb-4"> Frequently Asked Quetions</h2>
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                    1) How can I contact your customer service team? 
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                <div class="accordion-body">
+                    <p class="text-dark"><strong>For customer service inquiries only, please mail us at boinirajkumar02.com</strong></p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                    2) I emailed your customer service team. When will I receive a response? 
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <p class="text-dark"><strong>Our customer service team aims to respond to all E-mails within 24-48 hours.</strong></p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                    3) How long will Shipping take?
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                 <p class="text-dark" ><strong>All the orders are dispatched within 1-3 days from our warehouse after receiving the order. 
+
+                    Shipping estimates are 2-4 days depending on location and shipping option you choose
+                   
+                    Please note our fulfilment and shipping estimates depends on Customer location and shipping estimates might increase for your order during Public Holidays and busy periods.</strong></p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                    4) Do you offer Returns and Refunds?  
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <p class="text-dark"><strong>Please check our Product Return and Refund Policy to know more. </strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</section>
+<!--About us-->
+
+<section class="p-5 bg-white" id="About Us">
+  <div class="container">
+      <h2 class="text-center text-dark mb-4" style="font-size: 2rem;"> About Us </h2>
+      <div class="row align-items-center">
+          <!-- Image Section -->
+          <div class="col-md-6 text-center">
+              <img src="images/Raj7.webp" class="img-fluid" style="width: 100%; height: 100%; max-width: 400px; max-height: 400px; object-fit: cover;" alt="Rajkumar">
+          </div>
+          <!-- Text Section -->
+          <div class="col-md-6 bg-warning d-flex align-items-center" style="height: 400px;">
+              <p class="text-dark m-4" style="font-size: 1.2rem; text-align: justify; line-height: 1.8;">
+                  <strong>
+                      Welcome to Sharadha farms! We are Rajkumar and Praveen, passionate about promoting healthy living and sustainable food practices.
+                      Our mission is to provide high-quality organic food products that contribute to a healthier planet and lifestyle. 
+                      Thank you for supporting us on this journey toward a better and greener future. We look forward to serving you!
+                  </strong>
+              </p>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<!--Contact information-->
+
+<section class="p-5 bg-warning" id="Contact">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md">
+                <h2 class="text-center text-dark mb-4">
+                    Contact info
+                </h2>
+               <ul
+                class="list-group list-group-flush text-dark lead ">
+                <li class="">
+                    <span class="fw-bold">Name:</span>
+                    Boini Rajkumar
+                </li>
+
+                <li class="">
+                    <span class="fw-bold">Customer Care Number:</span>
+                    +91 9505511961
+                </li>
+
+                <li class="">
+                    <span class="fw-bold">Email Support Id:</span>
+                    boinirajkumar02@gmail.com
+                </li>
+
+                <li class="">
+                    <span class="fw-bold">Addres:</span>
+                    Hyderabad
+                </li>
+            </ul>
+
+        </div>
+        <div class="col ">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242831.02123378546!2d79.29577912500001!3d18.01430800000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a334f7bc15a6d79%3A0xd39e93ff6d5f18ab!2sChaitanya%20(Deemed%20to%20be%20University)!5e0!3m2!1sen!2sin!4v1689916263133!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+       </div>
+   </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!--Sign up latter-->
+
+
+<section class="bg-warning text-white p-3">
+    <div class="d-sm-flex">
+        <h5 class=" lead mx-4"><strong> Sign up for our news letters</strong></h5>
+        <div class="input-group md-2">
+            <input type="text"
+            class="form-control"
+            placeholder="Enter Email">
+            <button class="btn
+            btn-primary btn-lg">submit</button>
+        </div>
+    </div>
+</section>
+
+<section class="bg-white text-dark p-5">
+  <div class="container">
+      <h3 class="text-center text-dark mb-4">Follow Us On Instagram</h3>
+      <div class="row">
+          <!-- Image 1 -->
+          <div class="col-md-2 position-relative instagram-card">
+              <a href="https://www.instagram.com/boini.rajkumar.10/" target="_blank" class="text-decoration-none">
+                  <img src="images/Raj1.webp" alt="Image 1" class="img-fluid">
+                  <!-- Overlay -->
+                  <div class="instagram-overlay">
+                      <i class="bi bi-instagram instagram-icon"></i>
+                      
+                  </div>
+              </a>
+          </div>
+          <!-- Image 2 -->
+          <div class="col-md-2 position-relative instagram-card">
+              <a href="https://www.instagram.com/boini.rajkumar.10/" target="_blank" class="text-decoration-none">
+                  <img src="images/Raj2.webp" alt="Image 2" class="img-fluid">
+                  <div class="instagram-overlay">
+                      <i class="bi bi-instagram instagram-icon"></i>
+                      
+                  </div>
+              </a>
+          </div>
+          <!-- Repeat for other images -->
+          <div class="col-md-2 position-relative instagram-card">
+              <a href="https://www.instagram.com/boini.rajkumar.10/" target="_blank" class="text-decoration-none">
+                  <img src="images/Raj3.webp" alt="Image 3" class="img-fluid">
+                  <div class="instagram-overlay">
+                      <i class="bi bi-instagram instagram-icon"></i>
+                     
+                  </div>
+              </a>
+          </div>
+          <div class="col-md-2 position-relative instagram-card">
+              <a href="https://www.instagram.com/boini.rajkumar.10/" target="_blank" class="text-decoration-none">
+                  <img src="images/Raj4.jpg" alt="Image 4" class="img-fluid">
+                  <div class="instagram-overlay">
+                      <i class="bi bi-instagram instagram-icon"></i>
+                      
+                  </div>
+              </a>
+          </div>
+
+          <div class="col-md-2 position-relative instagram-card">
+            <a href="https://www.instagram.com/boini.rajkumar.10/" target="_blank" class="text-decoration-none">
+                <img src="images/Raj5.jpg" alt="Image 4" class="img-fluid">
+                <div class="instagram-overlay">
+                    <i class="bi bi-instagram instagram-icon"></i>
+                    
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-2 position-relative instagram-card">
+          <a href="https://www.instagram.com/boini.rajkumar.10/" target="_blank" class="text-decoration-none">
+              <img src="images/Raj6.jpg" alt="Image 4" class="img-fluid">
+              <div class="instagram-overlay">
+                  <i class="bi bi-instagram instagram-icon"></i>
+                  
+              </div>
+          </a>
+      </div>
+
+      </div>
+  </div>
+</section>
+
+
+
+<!--footer-->
+
+<footer class="p-3 bg-warning text-black text-center position-relative mt-1">
+    <div class="container">
+    <p class="lead text-dark" >
+        copyrights &copy; 2023 Reserved
+    </p>
+
+<!--arrow mark-->
+
+    <a href="" class="position-absolute bottom-0 end-0 p-3">
+        <i class="bi bi-arrow-up-circle h1"></i>
+    </a>
+    </div>
+    </footer>
+
+
+
+<!--entrol id-->
+
+
+  <!-- <button class="btn btn-warning btn-lg" data-bs-toggle="modal"
+    data-bs-target="#enroll" >
+      Start the enrollment
+    </button>-->
+
+
+  <!-- <div class="modal fade" id="enroll" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Enter your Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+
+
+
+    <div class="modal-body">
+        <p class="lead">
+          Fill out this form and we will get back to you
+        </p>
+        <form action="">
+          <div class="mb-3">
+          <label for="first-name">First Name:</label>
+          <input type="text" class="form-control" id="first-name">
+        </div>
+
+
+        <div class="mb-3">
+          <label for="last-name">Last name:</label>
+          <input type="text" class="form-control" id="last-name">
+        </div>
+
+
+        <div class="mb-3">
+          <label for="email">Email:</label>
+          <input type="text" class="form-control" id="email">
+        </div>
+
+
+
+
+        <div class="mb-3">
+          <label for="phone">Phone:</label>
+          <input type="text" class="form-control" id="phone">
+        </div>
+
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Register</button>
+      </div>
+    </div>
+  </div>
+</div>-->
+
+</body>
+</html>
